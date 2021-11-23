@@ -66,6 +66,11 @@
   </nav>
   
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+        <a href="/home" class="pt-3">
+          <h2 class="text-center pt-4"><strong>AMDECO</strong></h2>          
+          <span class="brand-text font-weight-light"></span> 
+        </a>
     <!-- Sidebar -->
     <div class="sidebar pt-4">
       <!-- Sidebar Menu -->
@@ -102,6 +107,24 @@
               </li>
             </ul>
           </li> --}}
+          <li class="nav-item">
+            <a href="/municipios" class="nav-link">
+              <i class="nav-icon fas fa-map"></i>
+              <p>Municipios</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pdes" class="nav-link">
+              <i class="nav-icon fas fa-newspaper"></i>
+              <p>PDES</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="reportes" class="nav-link">
+              <i class="nav-icon fas fa-file-excel"></i>
+              <p>Reportes Excel</p>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="user" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
