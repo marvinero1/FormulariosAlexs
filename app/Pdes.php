@@ -9,6 +9,7 @@ class Pdes extends Model
     protected $fillable = ['anio',
                         'pilar',
                         'meta',
+                        'resultado',
                         'accion',
                     ];
 }
