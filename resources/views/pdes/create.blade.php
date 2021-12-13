@@ -37,39 +37,19 @@
                                         <div class="form-group">
                                             <label for="nombre">Eje</label>
                                             <select class="form-control" name="eje" required>
-                                                <option value="1">Reconstruyendo la economía, retornando la estabilidad macroeconómica y social.</option>
-                                                <option value="2">Industrialización con sustitución de importaciones.</option>
-                                                <option value="3">Seguridad alimentaria con soberania, promoción de exportaciones con valor agregado y desarrollo turístico.</option>
-                                                <option value="4">Profundización del proceso de industrialización de los recursos naturales.</option>
-                                                <option value="5">Educación, investigación, ciencia y tecnología para fortalecimiento y desarrollo de capacidades y potencialidades. </option>
-                                                <option value="6">Salud y deportes para proteger la vida con cuidado integral en tiempos de pandemia.</option>
-                                                <option value="7">Reforma judicial, gestión pública digitalizada y transparente; seguridad y defensa integral con soberania nacional.</option>
-                                                <option value="8">Medio ambiente sustentable y equilibrado en armonía con la madre tierra.</option>
-                                                <option value="9">Integración y relaciones internacionales con soberania.</option>
-                                                <option value="10">Culturas Descolonización y despatriarcalización, para la revolución democrática cultural.</option>
+                                                <option value="Reconstruyendo la economia, retornando la estabilidad macroeconomica y social.">Reconstruyendo la economía, retornando la estabilidad macroeconómica y social.</option>
+                                                <option value="Industrializacion con sustitución de importaciones.">Industrialización con sustitución de importaciones.</option>
+                                                <option value="Seguridad alimentaria con soberania, promocion de exportaciones con valor agregado y desarrollo turistico.">Seguridad alimentaria con soberania, promoción de exportaciones con valor agregado y desarrollo turístico.</option>
+                                                <option value="Profundizacion del proceso de industrializacion de los recursos naturales.">Profundización del proceso de industrialización de los recursos naturales.</option>
+                                                <option value="Educacion, investigacion, ciencia y tecnologia para fortalecimiento y desarrollo de capacidades y potencialidades productivas.">Educación, investigación, ciencia y tecnología para fortalecimiento y desarrollo de capacidades y potencialidades.</option>
+                                                <option value="Salud y deportes para proteger la vida con cuidado integral en tiempos de pandemia.">Salud y deportes para proteger la vida con cuidado integral en tiempos de pandemia.</option>
+                                                <option value="Reforma judicial, gestión publica digitalizada y transparente; seguridad y defensa integral con soberania nacional.">Reforma judicial, gestión pública digitalizada y transparente; seguridad y defensa integral con soberania nacional.</option>
+                                                <option value="Medio ambiente sustentable y equilibrado en armonía con la madre tierra.">Medio ambiente sustentable y equilibrado en armonía con la madre tierra.</option>
+                                                <option value="Integracion y relaciones internacionales con soberania.">Integración y relaciones internacionales con soberania.</option>
+                                                <option value="Culturas Descolonizacion y despatriarcalizacion, para la revolucion democratica cultural.">Culturas Descolonización y despatriarcalización, para la revolución democrática cultural.</option>
                                             </select>
                                         </div>
                                     </div>
-
-                                    {{-- <select onChange="jsFunction()" id="selectOpt">
-                                        <option value="1" onclick="jsFunction()">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select> --}}
-{{--
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="nombre">Resultado</label>
-                                            <input type="text" class="form-control" name="resultado"placeholder="Resultado">
-                                        </div>
-                                    </div> --}}
-
-                                    {{-- <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="nombre">Acción</label>
-                                            <input type="text" class="form-control" name="accion" placeholder="Acción">
-                                        </div>
-                                    </div> --}}
                                 </div>
                             </div>
 
@@ -81,20 +61,4 @@
                     </div>
         </section>
 </div>
-{{-- <script>
-  function jsFunction(){
-    let  selectbool = true;
-    var myselect = document.getElementById("selectOpt").value;
-    console.log(myselect);
-
-    if (myselect == '1') {
-        selectbool = false;
-        console.log(selectbool);
-    } else {
-
-    }
-    // alert(myselect.options[myselect.selectedIndex].value);
-}
-
-</script> --}}
 @endsection

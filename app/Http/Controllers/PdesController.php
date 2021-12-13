@@ -40,15 +40,19 @@ class PdesController extends Controller
      */
     public function store(Request $request){
 
-        $data = $request->all();
-        $eje = $request->eje;
-        $anio = $request->anio;
-        $resultado = $request->resultado;
-        $accion = $request->accion;
+        $request->validate([
+            'anio' => 'required',
+            'eje' => 'required',
+        ]);
 
-        $pdes = Pdes::create($data);
+        // dd($request);
 
-        Session::flash('message','Pdes creado exisitosamente!');
+        Pdes::create([
+            'anio' => $request->anio,
+            'eje' => $request->eje,
+        ]);
+
+        Session::flash('message','Pdes Creado Exisitosamente!');
         return redirect()->route('pdes.index');
     }
 
@@ -85,10 +89,10 @@ class PdesController extends Controller
         $requestData = $request->all();
 
         $pdes = Pdes::find($id);
-
+        $pdes->pilar = $request->get('pilar');
+        $pdes->meta = $request->get('meta');
         $pdes->accion = $request->get('accion');
         $pdes->resultado = $request->get('resultado');
-
 
         $pdes->update();
 
