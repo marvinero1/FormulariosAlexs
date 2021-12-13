@@ -14,11 +14,11 @@
         <div class="float-left pr-2">
             <a href="{{ route('pdes.create')}}"><button class="btn btn-primary">
                     <i class="fa fa-plus">&nbsp;&nbsp;</i>Crear PEDES</button></a>
-        </div> 
+        </div>
         <div class="float-left">
             <a href="{{ route('exportExcel')}}"><button class="btn btn-success">
                     <i class="fa fa-file-excel">&nbsp;&nbsp;</i>Crear Reporte Excel</button></a>
-        </div> 
+        </div>
     <div class="float-right">
         <form class="form-inline my-2 my-lg-0">
             <input name="buscarpor" class="form-control mr-sm-2" type="search" placeholder="Buscador Año"
@@ -33,12 +33,12 @@
                 <tr>
                     <th style="text-align:center;" colspan="2">Año</th>
                     <th style="text-align:center;" colspan="2">Eje</th>
-                    <th style="text-align:center;"colspan="3">Acciones</th>                   
+                    <th style="text-align:center;"colspan="3">Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($pdes as $pdesS)
-                <tr>                     
+                <tr>
                     <td style="text-align:center;" colspan="2">{{ $pdesS->anio }}</td>
                     <td style="text-align:center;" colspan="2">{{ $pdesS->eje }}</td>
                     <td style="text-align:center;">
@@ -47,6 +47,9 @@
                         </button>
                         @if( Auth::user()->role == 'admin' )
                         <!-- Button trigger modal -->
+                        <a class="btn btn-success " href="{{ route('pdes.edit', $pdesS->id ) }}">
+                            <i class="fas fa-star"></i>  Agregar Accion Y Resultado
+                        </a>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal{{$pdesS->id}}">
                           <i class="fa fa-newspaper">&nbsp;&nbsp;</i>Actualizar Acción
                         </button>
@@ -59,7 +62,7 @@
                             title="Delete Image" onclick="return confirm(&quot;¿Desea eliminar?&quot;)"><i class="fa fas fa-trash"
                                     aria-hidden="true"></i> Eliminar</button>
                         </form>
-                        @endif                      
+                        @endif
                     </td>
 
                     <!-- Modal Actualizar-->
@@ -210,7 +213,7 @@
                                             <input type="text" class="form-control" disabled="true" value="{{ $pdesS->meta2 }}">
                                         </div>
                                     </div>
-                                    @endif 
+                                    @endif
                                     @if($pdesS->meta3 != null)
                                      <div class="col-md-12">
                                         <div class="form-group">
@@ -218,7 +221,7 @@
                                             <input type="text" class="form-control" disabled="true" value="{{ $pdesS->meta3 }}">
                                         </div>
                                     </div>
-                                    @endif 
+                                    @endif
                                     @if($pdesS->meta4 != null)
                                      <div class="col-md-12">
                                         <div class="form-group">
@@ -226,7 +229,7 @@
                                             <input type="text" class="form-control" disabled="true" value="{{ $pdesS->meta4 }}">
                                         </div>
                                     </div>
-                                    @endif 
+                                    @endif
                                     @if($pdesS->meta5 != null)
                                      <div class="col-md-12">
                                         <div class="form-group">
@@ -234,7 +237,7 @@
                                             <input type="text" class="form-control" disabled="true" value="{{ $pdesS->meta5 }}">
                                         </div>
                                     </div>
-                                    @endif 
+                                    @endif
                                     @if($pdesS->meta6 != null)
                                      <div class="col-md-12">
                                         <div class="form-group">
@@ -257,14 +260,14 @@
                                             <label for="nombre">Acción</label>
                                             <input type="text" class="form-control" name="accion" placeholder="{{ $pdesS->accion }}">
                                         </div>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                           </div>
-                        </form>  
+                        </form>
                         </div>
                       </div>
                     </div>
@@ -414,7 +417,7 @@
                                             <input type="text" class="form-control" disabled="true" value="{{ $pdesS->meta2 }}">
                                         </div>
                                     </div>
-                                    @endif 
+                                    @endif
                                     @if($pdesS->meta3 != null)
                                      <div class="col-md-12">
                                         <div class="form-group">
@@ -422,7 +425,7 @@
                                             <input type="text" class="form-control" disabled="true" value="{{ $pdesS->meta3 }}">
                                         </div>
                                     </div>
-                                    @endif 
+                                    @endif
                                     @if($pdesS->meta4 != null)
                                      <div class="col-md-12">
                                         <div class="form-group">
@@ -430,7 +433,7 @@
                                             <input type="text" class="form-control" disabled="true" value="{{ $pdesS->meta4 }}">
                                         </div>
                                     </div>
-                                    @endif 
+                                    @endif
                                     @if($pdesS->meta5 != null)
                                      <div class="col-md-12">
                                         <div class="form-group">
@@ -438,7 +441,7 @@
                                             <input type="text" class="form-control" disabled="true" value="{{ $pdesS->meta5 }}">
                                         </div>
                                     </div>
-                                    @endif 
+                                    @endif
                                     @if($pdesS->meta6 != null)
                                      <div class="col-md-12">
                                         <div class="form-group">
@@ -459,7 +462,7 @@
                                             <label for="nombre">Acción</label>
                                             <input type="text" class="form-control" value="{{ $pdesS->accion }}" disabled="true">
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>

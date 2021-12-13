@@ -15,11 +15,11 @@ class UserController extends Controller
      */
     public function index(Request $request){
         $name = $request->get('buscarpor');
-        
+
         $user = User::where('name','like',"%$name%")->where('role', 'user')
         ->latest()
         ->paginate(10);
-        
+
         return view('usuarios.index', compact('user'));
     }
 
@@ -44,23 +44,23 @@ class UserController extends Controller
         //
     }
 
-    public function subscripcion(Request $request, $id){ 
+    public function subscripcion(Request $request, $id){
         $user = User::find($id);
-         
 
-        $request->all(); 
+
+        $request->all();
         // dd($request);
 
         $user->registrado = $request->get('registrado');
-        
+
         // $user->fecha_inicio = $request->get('fecha_inicio');
         // $user->fecha_fin = $request->get('fecha_fin');
-        
-        $user->update(); 
+
+        $user->update();
 
         Session::flash('message','Habilitacion Exisitosamente!');
         return back()->withInput();
-    } 
+    }
 
     /**
      * Display the specified resource.
@@ -68,7 +68,7 @@ class UserController extends Controller
      * @param  \App\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function show(cr $cr)
+    public function show(User $user)
     {
         //
     }
@@ -79,9 +79,8 @@ class UserController extends Controller
      * @param  \App\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
-    {
-        //
+    public function edit(User $user){
+
     }
 
     /**
@@ -91,7 +90,7 @@ class UserController extends Controller
      * @param  \App\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cr $cr)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -102,7 +101,7 @@ class UserController extends Controller
      * @param  \App\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cr $cr)
+    public function destroy(User $user)
     {
         //
     }

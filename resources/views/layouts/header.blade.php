@@ -46,14 +46,14 @@
                   </a>
 
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
+
                     <hr>
                     <a class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
                           {{ __('Logout') }}
                       </a>
-                      
+
                       <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                           @csrf
                       </form>
@@ -62,14 +62,14 @@
               <li></li>
           @endguest
       </ul>
-    </div>    
+    </div>
   </nav>
-  
+
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
         <a href="/home" class="pt-3">
-          <h2 class="text-center pt-4"><strong>AMDECO</strong></h2>          
-          <span class="brand-text font-weight-light"></span> 
+          <h2 class="text-center pt-4"><strong>AMDECO</strong></h2>
+          <span class="brand-text font-weight-light"></span>
         </a>
     <!-- Sidebar -->
     <div class="sidebar pt-4">
@@ -107,12 +107,12 @@
               </li>
             </ul>
           </li> --}}
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="/municipios" class="nav-link">
               <i class="nav-icon fas fa-map"></i>
               <p>Municipios</p>
             </a>
-          </li>
+          </li> --}}
           <li class="nav-item">
             <a href="pdes" class="nav-link">
               <i class="nav-icon fas fa-newspaper"></i>

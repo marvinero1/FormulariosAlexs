@@ -65,7 +65,7 @@
                             <label class="col-md-4 col-form-label text-md-right">Telefono</label>
 
                             <div class="col-md-6">
-                                <input type="phone" class="form-control" name="telefono" required>
+                                <input type="phone" class="form-control" name="telefono" placeholder="Telefono" required>
                             </div>
                         </div>
 
@@ -73,10 +73,36 @@
                             <label class="col-md-4 col-form-label text-md-right">Dirección</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="direccion" required>
+                                <input type="text" class="form-control" name="direccion" placeholder="Direccion" required>
                             </div>
                         </div>
-                        
+
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label text-md-right">Municipio</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="municipio" placeholder="Nombre Municipio" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label text-md-right">Ciudad</label>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control" name="ciudad" required>
+                                    <option value="LaPaz">La Paz</option>
+                                    <option value="Oruro">Oruro</option>
+                                    <option value="Potosi">Potosi</option>
+                                    <option value="Cochabamba">Cochabamba</option>
+                                    <option value="Sucre">Sucre</option>
+                                    <option value="Tarija">Tarija</option>
+                                    <option value="SantaCruz">Santa Cruz</option>
+                                    <option value="Beni">Beni</option>
+                                    <option value="Pando">Pando</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
                         <input hidden="false" type="text" name="role" value="user">
                         <input hidden="false" type="text" name="registrado" value="false">
 
