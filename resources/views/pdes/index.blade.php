@@ -33,6 +33,8 @@
                 <tr>
                     <th style="text-align:center;" colspan="2">Año</th>
                     <th style="text-align:center;" colspan="2">Eje</th>
+                    <th style="text-align:center;" colspan="2">Pilar</th>
+
                     <th style="text-align:center;"colspan="3">Acciones</th>
                 </tr>
             </thead>
@@ -41,15 +43,17 @@
                 <tr>
                     <td style="text-align:center;" colspan="2">{{ $pdesS->anio }}</td>
                     <td style="text-align:center;" colspan="2">{{ $pdesS->eje }}</td>
+                    <td style="text-align:center;" colspan="2">{{ $pdesS->pilar }}</td>
+                    
                     <td style="text-align:center;">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalView{{ $pdesS->id }}">
                             <i class="fa fa-eye">&nbsp;&nbsp;</i>Ver
                         </button>
                         @if( Auth::user()->role == 'admin' )
                         <!-- Button trigger modal -->
-                        <a class="btn btn-success " href="{{ route('pdes.edit', $pdesS->id ) }}">
+                      <!--   <a class="btn btn-success " href="{{ route('pdes.edit', $pdesS->id ) }}">
                             <i class="fas fa-star"></i>  Agregar Accion Y Resultado
-                        </a>
+                        </a> -->
 
                         <form action="{{ route('pdes.destroy',$pdesS->id ) }}" method="POST"
                         accept-charset="UTF-8" style="display:inline">
@@ -106,6 +110,12 @@
                                         <div class="form-group">
                                             <label for="nombre">Acción</label>
                                             <input type="text" class="form-control" value="{{ $pdesS->accion }}" disabled="true">
+                                        </div>
+                                    </div>
+                                      <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="nombre">PET</label>
+                                            <input type="text" class="form-control" value="{{ $pdesS->pet }}" disabled="true">
                                         </div>
                                     </div>
                                 </div>

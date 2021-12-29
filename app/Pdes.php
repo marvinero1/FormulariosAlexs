@@ -12,5 +12,6 @@ class Pdes extends Model
                         'meta',
                         'resultado',
                         'accion',
+                        'pet',
                     ];
 }

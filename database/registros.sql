@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         5.7.24 - MySQL Community Server (GPL)
+-- Versión del servidor:         5.7.33 - MySQL Community Server (GPL)
 -- SO del servidor:              Win64
--- HeidiSQL Versión:             10.2.0.5599
+-- HeidiSQL Versión:             11.2.0.6213
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -10,6 +10,7 @@
 /*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
 -- Volcando estructura de base de datos para registros
@@ -74,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `municipios` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla registros.municipios: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla registros.municipios: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `municipios` DISABLE KEYS */;
 INSERT INTO `municipios` (`id`, `nombre`, `ciudad`, `created_at`, `updated_at`, `deleted_at`) VALUES
 	(1, 'asdasd', 'LaPaz', '2021-11-24 20:33:20', '2021-11-24 20:33:20', NULL),
@@ -100,27 +101,20 @@ CREATE TABLE IF NOT EXISTS `pdes` (
   `eje` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `pilar` text COLLATE utf8mb4_unicode_ci,
   `meta` text COLLATE utf8mb4_unicode_ci,
+  `pet` text COLLATE utf8mb4_unicode_ci,
   `accion` text COLLATE utf8mb4_unicode_ci,
   `resultado` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla registros.pdes: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla registros.pdes: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `pdes` DISABLE KEYS */;
-INSERT INTO `pdes` (`id`, `anio`, `eje`, `pilar`, `meta`, `accion`, `resultado`, `created_at`, `updated_at`, `deleted_at`) VALUES
-	(36, '2021', 'Reconstruyendo la economia, retornando la estabilidad macroeconomica y social.', NULL, NULL, NULL, NULL, '2021-12-13 14:34:52', '2021-12-13 14:34:52', NULL),
-	(37, '2021', 'Industrializacion con sustitución de importaciones.', NULL, NULL, NULL, NULL, '2021-12-13 14:44:57', '2021-12-13 14:44:57', NULL),
-	(38, '2021', 'Seguridad alimentaria con soberania, promocion de exportaciones con valor agregado y desarrollo turistico.', NULL, NULL, NULL, NULL, '2021-12-13 14:45:08', '2021-12-13 14:45:08', NULL),
-	(39, '2021', 'Profundizacion del proceso de industrializacion de los recursos naturales.', NULL, NULL, NULL, NULL, '2021-12-13 14:45:21', '2021-12-13 14:45:21', NULL),
-	(40, '2021', 'Educacion, investigacion, ciencia y tecnologia para fortalecimiento y desarrollo de capacidades y potencialidades productivas.', NULL, NULL, NULL, NULL, '2021-12-13 14:45:30', '2021-12-13 14:45:30', NULL),
-	(41, '2021', 'Salud y deportes para proteger la vida con cuidado integral en tiempos de pandemia.', NULL, NULL, NULL, NULL, '2021-12-13 14:45:41', '2021-12-13 14:45:41', NULL),
-	(42, '2021', 'Reforma judicial, gestión publica digitalizada y transparente; seguridad y defensa integral con soberania nacional.', NULL, NULL, NULL, NULL, '2021-12-13 14:45:49', '2021-12-13 14:45:49', NULL),
-	(43, '2021', 'Medio ambiente sustentable y equilibrado en armonía con la madre tierra.', NULL, NULL, NULL, NULL, '2021-12-13 14:46:02', '2021-12-13 14:46:02', NULL),
-	(44, '2021', 'Integracion y relaciones internacionales con soberania.', NULL, NULL, NULL, NULL, '2021-12-13 14:46:14', '2021-12-13 14:46:14', NULL),
-	(45, '2021', 'Culturas Descolonizacion y despatriarcalizacion, para la revolucion democratica cultural.', NULL, NULL, NULL, NULL, '2021-12-13 14:46:21', '2021-12-13 14:46:21', NULL);
+INSERT INTO `pdes` (`id`, `anio`, `eje`, `pilar`, `meta`, `pet`, `accion`, `resultado`, `created_at`, `updated_at`, `deleted_at`) VALUES
+	(46, '2025', 'Industrializacion con sustitución de importaciones.', 'Erradicación de la pobreza.', 'Implementar Politicas de Prevención y Protección contra el Racismo y Toda Forma de Discriminación.', 'ooooooooooooooo', 'bbbbbbbbbbbbb', 'aaaaa', '2021-12-29 16:44:09', '2021-12-29 16:44:09', NULL),
+	(47, '2023', 'Salud y deportes para proteger la vida con cuidado integral en tiempos de pandemia.', 'Erradicación de la pobreza.', 'Implementar Politicas de Prevención y Protección contra el Racismo y Toda Forma de Discriminación.', 'tgtgtt', 'yuiuyi', 'jh', '2021-12-29 16:46:01', '2021-12-29 16:46:01', NULL);
 /*!40000 ALTER TABLE `pdes` ENABLE KEYS */;
 
 -- Volcando estructura para tabla registros.reportes
@@ -156,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla registros.users: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla registros.users: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `registrado`, `telefono`, `direccion`, `municipio`, `ciudad`, `role`, `remember_token`, `deleted_at`, `created_at`, `updated_at`) VALUES
 	(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$7N5AzJPjzXQbR2ukxPeTuuIKxEtpdzCLp9UFkMSIMiTBtswRLccCK', 'true', '76964607', 'Av. aVENIDA', NULL, NULL, 'admin', NULL, NULL, '2021-11-24 20:31:27', '2021-11-24 20:31:27'),
@@ -164,5 +158,6 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;

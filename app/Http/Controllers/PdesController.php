@@ -43,6 +43,7 @@ class PdesController extends Controller
         $request->validate([
             'anio' => 'required',
             'eje' => 'required',
+            'pilar' => 'required',
         ]);
 
         // dd($request);
@@ -50,6 +51,11 @@ class PdesController extends Controller
         Pdes::create([
             'anio' => $request->anio,
             'eje' => $request->eje,
+            'pilar' => $request->pilar,
+            'meta' => $request->meta,
+            'resultado' => $request->resultado,
+            'accion' => $request->accion,
+            'pet' => $request->pet
         ]);
 
         Session::flash('message','Pdes Creado Exisitosamente!');
