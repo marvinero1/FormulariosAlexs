@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Pdes;
 use Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PdesController extends Controller
 {
@@ -19,7 +20,10 @@ class PdesController extends Controller
 
         $pdes = Pdes::where('anio','like',"%$anio%")->latest()->paginate(10);
 
-        return view('pdes.index', compact('pdes'));
+        $pdesCount = DB::table('pdes')->count();
+        // echo $pdesCount;
+
+        return view('pdes.index', compact('pdes','pdesCount'));
     }
 
     /**
@@ -40,11 +44,7 @@ class PdesController extends Controller
      */
     public function store(Request $request){
 
-        $request->validate([
-            'anio' => 'required',
-            'eje' => 'required',
-            'pilar' => 'required',
-        ]);
+        $request->all();
 
         // dd($request);
 
